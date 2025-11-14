@@ -11,6 +11,8 @@ mongoose.connect("mongodb+srv://cmctekk:tekkentag2@cluster0.mvqgnrf.mongodb.net/
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`API corriendo en puerto ${PORT}`));
 
 // 2) -------- Modelo del Ticket --------
 const TicketSchema = new mongoose.Schema({
